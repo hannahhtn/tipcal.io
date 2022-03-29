@@ -1,0 +1,135 @@
+*
+{
+    font-family: Space Mono;
+    font-weight: bold;
+}
+
+body
+{
+    background-color: rgb(201, 237, 247);
+}
+
+#app-name
+{
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 80px;
+    font-size: 24px;
+    color: hsl(183, 100%, 15%);
+}
+
+.container
+{
+    border-radius: 15px;
+    background-color: hsl(0, 0%, 100%);
+    display: flex;
+    width: 820px;
+    margin: auto;
+    left: 0;
+    right: 0;
+    padding: 20px 0px;
+}
+
+.container .left
+{
+    padding: 0px 40px;
+    padding-bottom: 20px;
+}
+
+.input
+{
+    font-size: 25px;
+    color: hsl(183, 100%, 15%);
+    font-weight: bold;
+    background-color: hsl(0, 0%, 95%);
+    border-radius: 5px;
+    border: 0;
+}
+
+#tips
+{
+    display: grid;
+    grid-template-rows: 50px 50px;
+    grid-template-columns: 80px 80px 80px;
+    grid-row-gap:    10px;
+    grid-column-gap: 30px;
+}
+
+#tips .grid-item
+{
+    height: 40px;
+    width: 90px;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 5px;
+    border: 0px;
+    color: white;
+    background-color: hsl(183, 100%, 15%);
+}
+
+#tips #custom
+{
+   background-color: hsl(185, 41%, 84%);
+   color: hsl(183, 100%, 15%);
+}
+
+.container .right
+{
+    background-color: hsl(183, 100%, 15%);
+    width: 40%;
+    border-radius: 20px;
+    padding: 40px;
+}
+
+div #tip-total
+{
+    display: grid;
+    grid-template-rows: 80px 80px;
+    grid-template-columns: 150px 150px;
+    grid-column-gap: 30px;
+}
+
+div #amount
+{
+    color: white;
+}
+
+ div #amount .per-person
+{
+    color: hsl(0, 0%, 81%);
+    opacity: 0.5;
+}
+
+div .amount-num
+{
+    text-align: right;
+    color: hsl(172, 67%, 45%);
+} 
+
+#reset
+{
+    position: relative;
+    top: 80px;
+}
+
+#button
+{
+    font-size: 20px;
+    background-color: hsl(172, 67%, 45%);
+    width: 100%;
+    border-radius: 5px;
+    border: 0px;
+    color: hsl(183, 100%, 15%);
+    padding: 8px 0px;
+}
+
+.attribution 
+{ 
+    font-size: 11px; text-align: center; 
+}
+
+.attribution a 
+{ 
+    color: hsl(228, 45%, 44%); 
+}
+ 

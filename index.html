@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./style.css">
+  <link href='https://fonts.googleapis.com/css?family=Space Mono' rel='stylesheet'>
+
+  <title>Frontend Mentor | Tip calculator app</title>
+</head>
+
+<body>
+    <div id="app-name">
+        <p>S P L I</p>
+        <p>T T E R</p>
+    </div>
+
+    <div class="container">
+        <div class="left">
+            <p>Bill</p>
+            <input type="text" class="input">
+            <br>
+
+            <p>Select Tip %</p>
+            <div id="tips">
+                <button class="grid-item">5%</button>
+                <button class="grid-item">10%</button>
+                <button class="grid-item">15%</button>
+                <button class="grid-item">25%</button>
+                <button class="grid-item">50%</button>
+                <button class="grid-item" id="custom">Custom</button>
+            </div>
+
+            <p>Number of People</p>
+            <input type="text" class="input">
+        </div>
+
+        <div class="right">
+            <div id="tip-total">
+                <div id="amount">
+                    <p>Tip Amount<br><span class="per-person">/person</span></p>
+                </div>
+                <div class="amount-num">
+                    <h1>$0.00</h1>
+                </div>
+                
+                <div id="amount">
+                    <p>Total<br><span class="per-person">/person</span></p>
+                </div>
+                <div class="amount-num">
+                    <h1>$0.00</h1>
+                </div>
+            </div>
+
+            <div id="reset">
+                <button id="button">RESET</button>
+            </div>
+        </div>
+    </div>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Hannah Ho</a>.
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
