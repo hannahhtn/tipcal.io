@@ -36,6 +36,17 @@ body
     padding-bottom: 20px;
 }
 
+#input-and-error
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+#bill-error, #tip-error, #pp-error
+{
+    color: red;
+}
+
 .input
 {
     font-size: 25px;
@@ -44,6 +55,7 @@ body
     background-color: hsl(0, 0%, 95%);
     border-radius: 5px;
     border: 0;
+    text-align: right;
 }
 
 #tips
@@ -55,7 +67,7 @@ body
     grid-column-gap: 30px;
 }
 
-#tips .grid-item
+#tips .grid-item, #custom-input
 {
     height: 40px;
     width: 90px;
@@ -67,10 +79,10 @@ body
     background-color: hsl(183, 100%, 15%);
 }
 
-#tips #custom
+#tips #custom-input
 {
-   background-color: hsl(185, 41%, 84%);
-   color: hsl(183, 100%, 15%);
+    background-color: hsl(185, 41%, 84%);
+    color: hsl(183, 100%, 15%);
 }
 
 .container .right
@@ -106,13 +118,15 @@ div .amount-num
     color: hsl(172, 67%, 45%);
 } 
 
-#reset
+.button-container
 {
     position: relative;
-    top: 80px;
+    top: 20px;
+    padding-bottom: 20px;
+
 }
 
-#button
+.button
 {
     font-size: 20px;
     background-color: hsl(172, 67%, 45%);
@@ -121,6 +135,11 @@ div .amount-num
     border: 0px;
     color: hsl(183, 100%, 15%);
     padding: 8px 0px;
+}
+
+#calculate:hover, .grid-item:hover, #reset:hover, #custom-input:hover
+{
+    opacity: 0.7;
 }
 
 .attribution 

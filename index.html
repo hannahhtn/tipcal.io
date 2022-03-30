@@ -19,22 +19,31 @@
 
     <div class="container">
         <div class="left">
-            <p>Bill</p>
-            <input type="text" class="input">
+            <div id="input-and-error">
+                <p>Bill</p>
+                <p id="bill-error"></p>
+            </div>
+            <input type="text" class="input" id="bill-input">
             <br>
 
-            <p>Select Tip %</p>
+            <div id="input-and-error">
+                <p>Select Tip %</p>
+                <p id="tip-error"></p>
+            </div>
             <div id="tips">
                 <button class="grid-item">5%</button>
                 <button class="grid-item">10%</button>
                 <button class="grid-item">15%</button>
                 <button class="grid-item">25%</button>
                 <button class="grid-item">50%</button>
-                <button class="grid-item" id="custom">Custom</button>
+                <input type="text" id="custom-input" placeholder="Custom">
             </div>
-
-            <p>Number of People</p>
-            <input type="text" class="input">
+            
+            <div id="input-and-error">
+                <p>Number of People</p>
+                <p id="pp-error"></p>
+            </div>
+            <input type="text" class="input" id="num-people">
         </div>
 
         <div class="right">
@@ -43,19 +52,23 @@
                     <p>Tip Amount<br><span class="per-person">/person</span></p>
                 </div>
                 <div class="amount-num">
-                    <h1>$0.00</h1>
+                    <h1 id="tip-amount">$0.00</h1>
                 </div>
                 
                 <div id="amount">
                     <p>Total<br><span class="per-person">/person</span></p>
                 </div>
                 <div class="amount-num">
-                    <h1>$0.00</h1>
+                    <h1 id="total-per-person">$0.00</h1>
                 </div>
             </div>
+            
+            <div class="button-container">
+                <button class="button" id="calculate">CALCULATE</button>
+            </div>
 
-            <div id="reset">
-                <button id="button">RESET</button>
+            <div class="button-container">
+                <button class="button" id="reset">RESET</button>
             </div>
         </div>
     </div>
