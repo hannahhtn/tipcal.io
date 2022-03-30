@@ -6,7 +6,7 @@ let percentage = EMPTY_VAL;
 document.getElementById('custom-input').addEventListener('input', event => {
     var regex=/^[0-9]+$/;
     const num = event.target.value;
-    if(event.target.value.length == 0)
+    if(document.getElementById('custom-input').value.length == 0)
     {
         percentage = EMPTY_VAL;
     }
@@ -23,7 +23,14 @@ document.getElementById('custom-input').addEventListener('input', event => {
 })
 
 document.getElementById('custom-input').addEventListener('click', event => {
-    percentage = EMPTY_VAL;
+    if(document.getElementById('custom-input').value.length == 0)
+    {
+        percentage = EMPTY_VAL;
+    }
+    else
+    {
+        percentage = document.getElementById('custom-input').value;
+    }
     document.querySelectorAll('.grid-item').forEach(item => {
         item.style.backgroundColor = 'hsl(183, 100%, 15%)';
         item.style.color = 'white';
@@ -70,22 +77,39 @@ function helper(num, id, string, all_fill_out)
     }
     else
     {
-        var regex=/^[0-9]+$/;
         const list = 
         {
             'bill-error':'bill-input',
             'pp-error':'num-people',
         }
-
-        if(!document.getElementById(list[id]).value.match(regex))
+        if(id == 'pp-error')
         {
-            document.getElementById(id).innerHTML = 'Invalid value';
-            return false;
+            var regex=/^[0-9]+$/;
+            if(!document.getElementById(list[id]).value.match(regex))
+            {
+                document.getElementById(id).innerHTML = 'Invalid value';
+                return false;
+            }
+            else
+            {
+                document.getElementById(id).innerHTML = '';
+                return true;
+            }
         }
-        else
+
+        if(id == 'bill-error')
         {
-            document.getElementById(id).innerHTML = '';
-            return true;
+            const bill_amount = document.getElementById(list[id]).value;
+            if(bill_amount >= 0)
+            {
+                document.getElementById(id).innerHTML = '';
+                return true;
+            }
+            else
+            {
+                document.getElementById(id).innerHTML = 'Invalid value';
+                return false;
+            }
         }
     }
 }
