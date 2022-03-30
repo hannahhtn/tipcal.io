@@ -93,12 +93,11 @@ body
     padding: 40px;
 }
 
-div #tip-total
+div .tip-total
 {
-    display: grid;
-    grid-template-rows: 80px 80px;
-    grid-template-columns: 150px 150px;
-    grid-column-gap: 30px;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
 }
 
 div #amount
