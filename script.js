@@ -41,7 +41,8 @@ document.querySelectorAll('.grid-item').forEach(item => {
     item.addEventListener('click', event => {
         //handle click
         const collection = document.getElementsByClassName("grid-item");
-
+        document.getElementById('tip-error').innerHTML = '';
+        
         for(let i = 0; i < collection.length; i++)
         {
             if(collection[i] == item)
